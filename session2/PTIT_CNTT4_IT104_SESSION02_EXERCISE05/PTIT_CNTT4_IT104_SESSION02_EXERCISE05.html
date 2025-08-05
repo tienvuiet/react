@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >   
+        const phoneBook = [];
+        const addContact = (name, phoneNumber, email) =>{
+            contact = {name, phoneNumber,email};
+            phoneBook.push(contact);
+            console.log(`da them thanh cong`);
+            
+        }
+        const displayContact = () =>{
+            if(phoneBook.length===0){
+                console.log(`khong co thong tin`);
+            }else{
+                phoneBook.forEach((element, index)=>{
+                    console.log(`${index}. ${element.name} || ${element.phoneNumber}||${element.email}`);
+                })
+            }
+        }
+        addContact("tien","01231232","aasdfaf");
+        displayContact();
+    </script>
+</body>
+</html>
