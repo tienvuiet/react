@@ -1,0 +1,134 @@
+.red {
+    color: rgb(245, 244, 244);
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    align-items: center;
+
+}
+
+.blue {
+    color: rgb(245, 244, 244);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(130, 58, 231);
+    align-items: center;
+
+}
+
+.yellow {
+    color: rgb(245, 244, 244);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(178, 237, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total {
+    /* width: 500px;
+    height: 500px; */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    background-color: #d1d5db;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.main {
+    background-color: #d61414;
+    color: rgb(42, 19, 19);
+    padding: 20px;
+    flex: 1;
+    /* margin: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.footer {
+    background-color: #d1d5db;
+    color: rgb(42, 19, 19);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+
+}
+
+.mainfooter {
+    display: "flex";
+    flex-direction: column;
+    flex: 1;
+    margin: 20px;
+}
+
+.headerr {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #9ca3af;
+    color: rgb(13, 5, 5);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart {
+    color: black;
+    padding: 20px 65px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /* width: 100vh; */
+}
+
+.article {
+    color: black;
+    padding: 80px;
+    background-color: #93c5fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layoutTotal {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.layoutTotal2 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
