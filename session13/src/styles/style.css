@@ -1,0 +1,9 @@
+.exercidse03 {
+    text-align: center;
+    width: 200px;
+}
+
+.exercidse03 th td {
+        border: 1px solid black;
+        padding: 8px 12px;
+}
