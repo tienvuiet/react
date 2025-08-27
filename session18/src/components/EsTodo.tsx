@@ -1,4 +1,4 @@
-import { useReducer, type ChangeEvent } from "react"
+import { useReducer, useEffect, type ChangeEvent } from "react"
 
 type Job = {
   id: number
@@ -11,13 +11,14 @@ type State = {
   new_title: string
 }
 
-type Action = { type: "ADD"; payload: Job }| { type: "DELETE"; payload: number }| { type: "SET_TITLE"; payload: string }
+type Action =
+  | { type: "ADD"; payload: Job }
+  | { type: "DELETE"; payload: number }
+  | { type: "SET_TITLE"; payload: string }
+  | { type: "SET_JOBS"; payload: Job[] } // load từ localStorage
 
 const initial: State = {
-  jobs: [
-    { id: 1, title: "Học C++", completed: true },
-    { id: 2, title: "Python", completed: false },
-  ],
+  jobs: [],
   new_title: "",
 }
 
@@ -25,6 +26,9 @@ const todoReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "SET_TITLE":
       return { ...state, new_title: action.payload }
+
+    case "SET_JOBS":
+      return { ...state, jobs: action.payload }
 
     case "ADD":
       return {
@@ -42,9 +46,19 @@ const todoReducer = (state: State, action: Action): State => {
       return state
   }
 }
-
 export default function EsTodo() {
   const [todos, dispatch] = useReducer(todoReducer, initial)
+
+  useEffect(() => {
+    const data = localStorage.getItem("todos")
+    if (data) {
+      dispatch({ type: "SET_JOBS", payload: JSON.parse(data) })
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos.jobs))
+  }, [todos.jobs])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: "SET_TITLE", payload: e.target.value })
@@ -53,7 +67,7 @@ export default function EsTodo() {
   const addTodo = () => {
     if (!todos.new_title.trim()) return
     const newTodo: Job = {
-      id: Math.floor(Math.random() * 9999999),
+      id: Date.now(),
       title: todos.new_title,
       completed: false,
     }
@@ -78,7 +92,7 @@ export default function EsTodo() {
       <ul>
         {todos.jobs.map((item) => (
           <li key={item.id}>
-            {item.title}{" "}
+            {item.title}
             <button onClick={() => deleteJob(item.id)}>Xóa</button>
           </li>
         ))}
