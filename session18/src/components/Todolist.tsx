@@ -4,7 +4,7 @@ type Job = {
   title: string;
   completes: boolean;
 };
-export default function Todos() {
+export default function Todolist() {
   const initial = {
     jobs: [
       {

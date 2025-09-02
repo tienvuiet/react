@@ -1,7 +1,7 @@
 
 // import ParentComponent from './components/ParentComponent'
 
-import EsTodo from "./components/EsTodo";
+// import EsTodo from "./components/EsTodo";
 
 // import Es6 from "./components/Es6";
 
@@ -14,21 +14,21 @@ import EsTodo from "./components/EsTodo";
 // import Es1 from "./components/Es1";
 // import Es2 from "./components/Es2";
 
-// import Todolist from "./components/Todolist";
-
+import Todolist from "./components/Todolist"
 export default function App() {
   
   return (
     <div>
         {/* <ParentComponent/> */}
-        {/* <Todolist/> */}
+        <Todolist/>
         {/* <Es1/> */}
         {/* <Es2/> */}
         {/* <Es3/> */}
         {/* <Es4/> */}
         {/* <Es5/> */}
         {/* <Es6/> */}
-        <EsTodo/>
+        {/* <EsTodo/> */}
+
     </div>
   )
 }
