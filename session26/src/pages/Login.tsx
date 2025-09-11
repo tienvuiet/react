@@ -19,11 +19,6 @@ type User = {
     password: string,
     role: string
 }
-
-
-
-
-
 const { Option } = Select;
 const formItemLayout = {
     labelCol: {
