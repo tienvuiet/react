@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>    
+    //tao promise
+        const promise = new Promise((resolve, reject) =>{  
+            //tao ra mot tac vu mat thoi gian  
+            setTimeout(()=>{    
+            if(false){
+                resolve("Nguyen van A")
+            }else{
+                reject("Da co loi")
+            }
+            },2000)
+            
+        })
+    //trien khai promise    
+        promise
+        //thanh cong
+        .then((result)=>{    
+            console.log(`Result: `, result);
+            
+        })
+        //that bai
+        .catch((error)=>{
+            console.log("Error: ", error);
+        })
+        //chay khi promise thanh cong hoac that bai
+        .finally(()=>{
+            //don dep bo nho, tat cac hieu ung
+            console.log("Hoan thanh chuong trinh");
+            
+        })
+    </script>
+</body>
+</html>
