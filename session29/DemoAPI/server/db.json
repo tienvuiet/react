@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "name": "Todo Updated",
+      "age": 1000,
+      "id": 2
+    },
+    {
+      "name": "Todo Updated",
+      "age": 1000,
+      "id": 3
+    }
+  ],
+  "products": [],
+  "carts": []
+}
