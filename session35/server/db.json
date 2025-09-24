@@ -1,12 +1,12 @@
 {   
-    "user": [   
+    "users": [   
         {   
             "id": 1,
-            "name":"tien"
+            "name":"Minh Huyen"
         },
          {   
             "id": 2,
-            "name":"sieu nhan"
+            "name":"Minh Thu"
         }
     ]
 }
